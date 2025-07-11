@@ -111,11 +111,11 @@ export default function BookingForm() {
                       <SelectValue placeholder="Startup Stage" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="idea">Idea Stage</SelectItem>
-                      <SelectItem value="mvp">MVP/Pre-Revenue</SelectItem>
-                      <SelectItem value="early">Early Revenue</SelectItem>
-                      <SelectItem value="growth">Growth Stage</SelectItem>
-                      <SelectItem value="scale">Scaling</SelectItem>
+                      <SelectItem value="Idea Stage">Idea Stage</SelectItem>
+                      <SelectItem value="Seed Stage">Seed Stage</SelectItem>
+                      <SelectItem value="Series A">Series A</SelectItem>
+                      <SelectItem value="Growth Stage">Growth Stage</SelectItem>
+                      <SelectItem value="Mature">Mature</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
