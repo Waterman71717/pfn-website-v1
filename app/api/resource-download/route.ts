@@ -42,7 +42,6 @@ export async function POST(request: Request) {
           Email: email.toLowerCase().trim(),
           Resource: resource.trim(),
           "Resource Type": resourceType,
-          "Download Date": new Date().toISOString(),
           Source: "Website - Resource Download",
           "Lead Score": resourceScores[resourceType as keyof typeof resourceScores] || 10,
           "Engagement Level": resourceType === "ZIP Bundle" ? "High" : "Medium",
