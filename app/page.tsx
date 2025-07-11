@@ -22,8 +22,8 @@ import StickyNavigation from "./components/StickyNavigation"
 import TrustSignals from "./components/TrustSignals"
 import SocialProof from "./components/SocialProof"
 
-import AirtableDebugger from "./components/AirtableDebugger"
-import FormDebugger from "./components/FormDebugger"
+// Removed: import AirtableDebugger from "./components/AirtableDebugger"
+// Removed: import FormDebugger from "./components/FormDebugger"
 
 export default function Home() {
   return (
@@ -51,9 +51,9 @@ export default function Home() {
       <Newsletter />
       <FinalCTA />
       <Footer />
-      {/* Debug Components - Remove after testing */}
-      <AirtableDebugger />
-      <FormDebugger />
+      {/* Debug Components - Removed after testing */}
+      {/* Removed: <AirtableDebugger /> */}
+      {/* Removed: <FormDebugger /> */}
     </main>
   )
 }
