@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     }
 
     const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID
-    const AIRTABLE_TABLE_NAME = "Community_Signups"
+    const AIRTABLE_TABLE_NAME = "Community_Signups" // Confirmed from previous context
     const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
 
     if (!AIRTABLE_BASE_ID || !AIRTABLE_API_KEY) {
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
         fields: {
           Name: name.trim(),
           Email: email.toLowerCase().trim(),
-          "Signup Date": new Date().toISOString(),
+          // Removed "Signup Date" as Airtable sets it by default.
           Source: "Website - Community Signup",
           Status: "Active",
           "Lead Score": 25,
