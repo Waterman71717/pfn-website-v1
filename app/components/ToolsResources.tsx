@@ -6,14 +6,14 @@ export default function ToolsResources() {
       title: "Startup Process Improvement - Sample Edition",
       description: "Complete introduction, Chapter 1, and key excerpts from the full methodology",
       resourceType: "PDF Sample",
-      fileName: "startup-process-improvement-sample.pdf",
+      fileName: "startup_process_sample.pdf",
       featured: true,
     },
     {
       title: "Process Maturity Assessment",
       description: "Comprehensive 40-question quiz to assess your startup's operational excellence level",
       resourceType: "Interactive PDF",
-      fileName: "process-maturity-assessment.pdf",
+      fileName: "process_maturity_quiz.pdf",
     },
     {
       title: "Startup Metrics Tracker",
@@ -25,25 +25,25 @@ export default function ToolsResources() {
       title: "Process Mapping Template",
       description: "Visual templates and worksheets for mapping your startup processes using Unified Magic methodology",
       resourceType: "PDF Template",
-      fileName: "process-mapping-template.pdf",
+      fileName: "process_mapping_template.pdf",
     },
     {
       title: "Lean Startup Canvas - Process Optimized",
       description: "Enhanced business model canvas integrating process improvement thinking",
       resourceType: "PDF Canvas",
-      fileName: "lean-startup-canvas.pdf",
+      fileName: "lean_startup_canvas.pdf",
     },
     {
       title: "Kaizen Daily Huddle Worksheet",
       description: "Structure your daily improvement meetings with this proven framework",
       resourceType: "PDF Worksheet",
-      fileName: "daily-huddle-worksheet.pdf",
+      fileName: "kaizen_daily_huddle_worksheet.pdf",
     },
     {
       title: "Tool Stack Recommendations Guide",
       description: "Comprehensive guide to essential software and tools for startup process excellence",
       resourceType: "PDF Guide",
-      fileName: "tool-stack-guide.pdf",
+      fileName: "tool_stack_recommendations.pdf",
     },
   ]
 
@@ -82,7 +82,7 @@ export default function ToolsResources() {
                 title="Complete PFN Starter Kit"
                 description="All 7 resources bundled together + exclusive implementation checklist"
                 resourceType="ZIP Bundle"
-                fileName="pfn-complete-starter-kit.zip"
+                fileName="Tools & Resources.zip"
               />
             </div>
           </div>

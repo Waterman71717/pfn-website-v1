@@ -1,0 +1,128 @@
+Startup Metrics Tracker - Process-First Network
+Emmanuel Bakare | Turning Chaos into Cash
+
+INSTRUCTIONS:
+1. Enter your data in the blue columns (Month 1-12)
+2. Formulas will automatically calculate growth rates and trends
+3. Focus on 5-7 key metrics that matter most to your business
+4. Update monthly for best results
+5. Use the insights to drive process improvements
+
+CUSTOMER METRICS,,,,,,,,,,,,,
+Metric,Definition,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Target
+Monthly Active Users (MAU),Unique users who engage with your product monthly,,,,,,,,,,,,,
+Customer Acquisition Cost (CAC),Total sales & marketing spend / new customers acquired,,,,,,,,,,,,,
+Customer Lifetime Value (CLV),Average revenue per customer / churn rate,,,,,,,,,,,,,
+Monthly Recurring Revenue (MRR),Predictable monthly revenue from subscriptions,,,,,,,,,,,,,
+Churn Rate %,Percentage of customers who stop using your product,,,,,,,,,,,,,
+Net Promoter Score (NPS),Customer satisfaction and loyalty score (0-100),,,,,,,,,,,,,
+Conversion Rate %,Percentage of leads that become paying customers,,,,,,,,,,,,,
+
+FINANCIAL METRICS,,,,,,,,,,,,,
+Metric,Definition,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Target
+Total Revenue,All income generated from sales,,,,,,,,,,,,,
+Gross Margin %,Revenue minus cost of goods sold / revenue,,,,,,,,,,,,,
+Burn Rate,Monthly cash expenditure,,,,,,,,,,,,,
+Runway (Months),Current cash / monthly burn rate,,,,,,,,,,,,,
+Cash Flow,Cash in minus cash out,,,,,,,,,,,,,
+Annual Recurring Revenue (ARR),MRR x 12 for subscription businesses,,,,,,,,,,,,,
+Revenue Growth Rate %,Month-over-month revenue growth,,,,,,,,,,,,,
+
+OPERATIONAL METRICS,,,,,,,,,,,,,
+Metric,Definition,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Target
+Employee Count,Total number of employees,,,,,,,,,,,,,
+Revenue per Employee,Total revenue / number of employees,,,,,,,,,,,,,
+Customer Support Tickets,Number of support requests received,,,,,,,,,,,,,
+Average Response Time (Hours),Time to respond to customer inquiries,,,,,,,,,,,,,
+Process Efficiency Score,Custom score based on process improvements,,,,,,,,,,,,,
+Defect Rate %,Percentage of products/services with errors,,,,,,,,,,,,,
+On-time Delivery %,Percentage of deliverables completed on schedule,,,,,,,,,,,,,
+
+PRODUCT METRICS,,,,,,,,,,,,,
+Metric,Definition,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Target
+Daily Active Users (DAU),Unique users who engage daily,,,,,,,,,,,,,
+Feature Adoption Rate %,Percentage of users using new features,,,,,,,,,,,,,
+Time to Value (Days),Days for new customer to see first value,,,,,,,,,,,,,
+Product Development Velocity,Features/improvements shipped per month,,,,,,,,,,,,,
+Bug Reports,Number of bugs reported by users,,,,,,,,,,,,,
+User Engagement Score,Composite score of user activity,,,,,,,,,,,,,
+Product-Market Fit Score,Survey-based score (0-100),,,,,,,,,,,,,
+
+MARKETING METRICS,,,,,,,,,,,,,
+Metric,Definition,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Target
+Website Traffic,Monthly unique visitors,,,,,,,,,,,,,
+Lead Generation,Number of qualified leads generated,,,,,,,,,,,,,
+Email Open Rate %,Percentage of emails opened,,,,,,,,,,,,,
+Social Media Followers,Total followers across all platforms,,,,,,,,,,,,,
+Content Engagement Rate %,Likes/shares/comments per post,,,,,,,,,,,,,
+Cost per Lead (CPL),Marketing spend / leads generated,,,,,,,,,,,,,
+Marketing Qualified Leads (MQL),Leads ready for sales engagement,,,,,,,,,,,,,
+
+GROWTH CALCULATIONS,,,,,,,,,,,,,
+Calculation,Formula,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Notes
+Revenue Growth Rate %,(Current Month - Previous Month) / Previous Month * 100,,,,,,,,,,,,,
+Customer Growth Rate %,(Current Customers - Previous Customers) / Previous Customers * 100,,,,,,,,,,,,,
+CLV to CAC Ratio,Customer Lifetime Value / Customer Acquisition Cost,,,,,,,,,,,,,Should be 3:1 or higher
+Months to Recover CAC,Customer Acquisition Cost / Monthly Revenue per Customer,,,,,,,,,,,,,Should be under 12 months
+Monthly Churn Rate %,Customers Lost / Total Customers at Start of Month * 100,,,,,,,,,,,,,Lower is better
+
+KEY PERFORMANCE INDICATORS (KPIs),,,,,,,,,,,,,
+Select your top 5-7 most important metrics,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Target
+KPI 1:,,,,,,,,,,,,,
+KPI 2:,,,,,,,,,,,,,
+KPI 3:,,,,,,,,,,,,,
+KPI 4:,,,,,,,,,,,,,
+KPI 5:,,,,,,,,,,,,,
+KPI 6:,,,,,,,,,,,,,
+KPI 7:,,,,,,,,,,,,,
+
+PROCESS IMPROVEMENT TRACKING,,,,,,,,,,,,,
+Process Improvement Initiative,Start Date,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Impact
+Customer Onboarding Optimization,,,,,,,,,,,,,,
+Sales Process Streamlining,,,,,,,,,,,,,,
+Support Ticket Resolution,,,,,,,,,,,,,,
+Product Development Cycle,,,,,,,,,,,,,,
+Financial Reporting Automation,,,,,,,,,,,,,,
+
+WASTE ELIMINATION TRACKING,,,,,,,,,,,,,
+Waste Type,Baseline Cost,Month 1,Month 2,Month 3,Month 4,Month 5,Month 6,Month 7,Month 8,Month 9,Month 10,Month 11,Month 12,Savings
+Overproduction Waste,$0,,,,,,,,,,,,,
+Waiting Time Waste,$0,,,,,,,,,,,,,
+Transportation Waste,$0,,,,,,,,,,,,,
+Over-processing Waste,$0,,,,,,,,,,,,,
+Inventory Waste,$0,,,,,,,,,,,,,
+Motion Waste,$0,,,,,,,,,,,,,
+Defect Waste,$0,,,,,,,,,,,,,
+Talent Underutilization,$0,,,,,,,,,,,,,
+Total Monthly Savings,$0,,,,,,,,,,,,,
+
+NOTES AND INSIGHTS,,,,,,,,,,,,,
+Month,Key Insights,Action Items,Process Improvements,Results,,,,,,,,,
+Month 1,,,,,,,,,,,,
+Month 2,,,,,,,,,,,,
+Month 3,,,,,,,,,,,,
+Month 4,,,,,,,,,,,,
+Month 5,,,,,,,,,,,,
+Month 6,,,,,,,,,,,,
+Month 7,,,,,,,,,,,,
+Month 8,,,,,,,,,,,,
+Month 9,,,,,,,,,,,,
+Month 10,,,,,,,,,,,,
+Month 11,,,,,,,,,,,,
+Month 12,,,,,,,,,,,,
+
+BENCHMARKS AND TARGETS,,,,,,,,,,,,,
+Industry Benchmarks,SaaS,E-commerce,Marketplace,B2B Services,Mobile App,Your Target,,,,,,,
+Customer Acquisition Cost,$100-$300,$20-$50,$50-$200,$500-$2000,$1-$5,,,,,,,,
+Monthly Churn Rate,5-7%,2-5%,3-8%,2-5%,10-15%,,,,,,,,
+Gross Margin,70-85%,20-40%,15-25%,60-80%,95%+,,,,,,,,
+Revenue Growth (Monthly),10-20%,5-15%,8-25%,5-10%,15-30%,,,,,,,,
+
+CONTACT AND SUPPORT,,,,,,,,,,,,,
+For help with metrics tracking and process improvement:,,,,,,,,,,,,,
+Emmanuel Bakare,,,,,,,,,,,,,
+Email: hello@startupprocessimprovement.com,,,,,,,,,,,,,
+Phone: 512-640-9994,,,,,,,,,,,,,
+Website: startupprocessimprovement.com,,,,,,,,,,,,,
+Book: Startup Process Improvement Vol. 1,,,,,,,,,,,,,
+

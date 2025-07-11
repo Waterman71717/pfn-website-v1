@@ -47,11 +47,14 @@ export default function ResourceDownload({
       if (response.ok) {
         setSubmitted(true)
         setEmail("")
-        // Trigger Netlify CDN download
-        window.open(`https://your-netlify-site.netlify.app/.netlify/functions/download?file=${fileName}`, "_blank")
+        // Trigger direct file download
+        window.open(`/download/${fileName}`, "_blank")
+      } else {
+        alert("Error: Failed to process download")
       }
     } catch (error) {
       console.error("Error downloading resource:", error)
+      alert("Error: Failed to process download")
     } finally {
       setIsSubmitting(false)
     }
@@ -81,7 +84,7 @@ export default function ResourceDownload({
       {submitted ? (
         <div className="text-center py-4">
           <CheckCircle className="w-8 h-8 text-gold mx-auto mb-2" />
-          <p className="text-sm text-gray-300">Download started! Check your email for the link.</p>
+          <p className="text-sm text-gray-300">Download started! Check your downloads folder.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-3">
