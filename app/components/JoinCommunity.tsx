@@ -18,7 +18,7 @@ export default function JoinCommunity() {
     try {
       console.log("Submitting form data:", formData) // Debug log
 
-      const response = await fetch("/.netlify/functions/join-community", {
+      const response = await fetch("/api/join-community", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

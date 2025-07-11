@@ -32,10 +32,7 @@ export async function POST(request: Request) {
         fields: {
           Name: name.trim(),
           Email: email.toLowerCase().trim(),
-          // Removed "Signup Date" as Airtable sets it by default.
           Source: "Website - Community Signup",
-          Status: "Active",
-          "Lead Score": 25,
         },
       }),
     })
