@@ -114,6 +114,7 @@ export default function PodcastSpotlight() {
             <h4 className="text-xl font-semibold mb-4 text-center text-gold">Apple Podcasts</h4>
             <div className="flex justify-center">
               <iframe
+                title="Process-First Network on Apple Podcasts"
                 allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
                 frameBorder="0"
                 height="450"
@@ -135,6 +136,7 @@ export default function PodcastSpotlight() {
             <h4 className="text-xl font-semibold mb-4 text-center text-gold">Spotify</h4>
             <div className="flex justify-center">
               <iframe
+                title="Process-First Network on Spotify"
                 style={{
                   borderRadius: "12px",
                   width: "100%",

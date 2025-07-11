@@ -18,7 +18,13 @@ export default function MobileMenu() {
 
   return (
     <div className="md:hidden">
-      <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="text-white hover:text-gold">
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        onClick={() => setIsOpen(!isOpen)} 
+        className="text-white hover:text-gold"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+      >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </Button>
 
