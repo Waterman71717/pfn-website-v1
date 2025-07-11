@@ -20,11 +20,8 @@ export default function Hero() {
   }
 
   const downloadSampleEbook = () => {
-    // Netlify CDN download
-    window.open(
-      "https://your-netlify-site.netlify.app/.netlify/functions/download?file=startup-process-improvement-sample.pdf",
-      "_blank",
-    )
+    // Direct download link
+    window.open("/downloads/startup_process_sample.pdf", "_blank")
   }
 
   return (
