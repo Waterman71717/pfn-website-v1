@@ -18,7 +18,7 @@ export default function AboutBook() {
             <div className="flex justify-center">
               <div className="relative">
                 <Image
-                  src="/images/book-cover.png"
+                  src="/images/cover.webp"
                   alt="Startup Process Improvement Vol. 1: Turning Chaos into Cash by Emmanuel Bakare"
                   width={300}
                   height={400}

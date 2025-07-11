@@ -5,11 +5,8 @@ import { Download } from "lucide-react"
 
 export default function FinalCTA() {
   const downloadSampleEbook = () => {
-    // Netlify CDN download
-    window.open(
-      "https://your-netlify-site.netlify.app/.netlify/functions/download?file=startup-process-improvement-sample.pdf",
-      "_blank",
-    )
+    // Direct download link
+    window.open("/downloads/startup_process_improvement_sample (1).pdf", "_blank")
   }
 
   const scrollToCommunity = () => {
