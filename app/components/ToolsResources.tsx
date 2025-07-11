@@ -81,7 +81,7 @@ export default function ToolsResources() {
               <ResourceDownload
                 title="Complete PFN Starter Kit"
                 description="All 7 resources bundled together + exclusive implementation checklist"
-                resourceType: "Checklist",
+                resourceType="Checklist"
                 fileName="Tools & Resources.zip"
               />
             </div>
