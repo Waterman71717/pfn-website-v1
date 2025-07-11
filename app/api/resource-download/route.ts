@@ -22,15 +22,6 @@ export async function POST(request: Request) {
       return Response.json({ error: "Server configuration error" }, { status: 500 })
     }
 
-    // Calculate lead score based on resource type
-    const resourceScores = {
-      PDF: 10,
-      "Google Sheets": 15,
-      Interactive: 20,
-      Guide: 12,
-      "ZIP Bundle": 25,
-    }
-
     const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`, {
       method: "POST",
       headers: {
@@ -43,8 +34,6 @@ export async function POST(request: Request) {
           Resource: resource.trim(),
           "Resource Type": resourceType,
           Source: "Website - Resource Download",
-          "Lead Score": resourceScores[resourceType as keyof typeof resourceScores] || 10,
-          "Engagement Level": resourceType === "ZIP Bundle" ? "High" : "Medium",
         },
       }),
     })
