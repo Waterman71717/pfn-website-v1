@@ -32,7 +32,7 @@ export async function POST(request: Request) {
         fields: {
           Email: email.toLowerCase().trim(),
           Source: "Website - Newsletter",
-          Status: "Active",
+          Status: "Subscribed",
         },
       }),
     })
