@@ -107,7 +107,7 @@ export default function BookingForm() {
                     className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                   />
                   <Select onValueChange={(value) => setFormData({ ...formData, stage: value })}>
-                    <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
+                    <SelectTrigger className="bg-gray-800 border-gray-700 text-white" aria-label="Select startup stage">
                       <SelectValue placeholder="Startup Stage" />
                     </SelectTrigger>
                     <SelectContent>
@@ -121,7 +121,7 @@ export default function BookingForm() {
                 </div>
 
                 <Select onValueChange={(value) => setFormData({ ...formData, preferredTime: value })}>
-                  <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
+                  <SelectTrigger className="bg-gray-800 border-gray-700 text-white" aria-label="Select preferred time">
                     <SelectValue placeholder="Preferred Time" />
                   </SelectTrigger>
                   <SelectContent>
