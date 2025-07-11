@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     }
 
     const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID
-    const AIRTABLE_TABLE_NAME = "feedback form"
+    const AIRTABLE_TABLE_NAME = "Feedback"
     const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
 
     if (!AIRTABLE_BASE_ID || !AIRTABLE_API_KEY) {
