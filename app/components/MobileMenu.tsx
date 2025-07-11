@@ -23,8 +23,8 @@ export default function MobileMenu() {
       </Button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-navy border-t border-gray-800 shadow-lg">
-          <nav className="container mx-auto px-4 py-4">
+        <div className="absolute top-full right-0 w-48 bg-navy border border-gray-800 shadow-lg rounded-lg mt-2">
+          <nav className="px-4 py-4">
             <div className="flex flex-col space-y-4">
               {menuItems.map((item) => (
                 <Link

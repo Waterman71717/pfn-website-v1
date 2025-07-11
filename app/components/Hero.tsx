@@ -21,7 +21,7 @@ export default function Hero() {
 
   const downloadSampleEbook = () => {
     // Direct download link
-    window.open("/downloads/startup_process_sample.pdf", "_blank")
+    window.open("/downloads/startup_process_improvement_sample (1).pdf", "_blank")
   }
 
   return (
