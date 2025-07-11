@@ -4,7 +4,7 @@ export async function POST(request: Request) {
 
     // Validate input
     if (!name || !email || !message) {
-      return Response.json({ error: "Name, email, and message are required" }, { status: 400 })
+      return Response.json({ error: "All fields are required" }, { status: 400 })
     }
 
     // Email validation
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     }
 
     const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID
-    const AIRTABLE_TABLE_NAME = "Feedback"
+    const AIRTABLE_TABLE_NAME = "feedback form"
     const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
 
     if (!AIRTABLE_BASE_ID || !AIRTABLE_API_KEY) {
@@ -33,11 +33,7 @@ export async function POST(request: Request) {
           Name: name.trim(),
           Email: email.toLowerCase().trim(),
           Message: message.trim(),
-          "Submission Date": new Date().toISOString(),
           Source: "Website - Feedback Form",
-          Status: "New",
-          "Response Required": "Yes",
-          "Lead Score": 20,
         },
       }),
     })
