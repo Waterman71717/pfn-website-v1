@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import BackToTop from "./components/BackToTop"
+import GoogleAnalytics from "./components/GoogleAnalytics"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -78,6 +79,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#0D1A2B" />
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         {children}
         <BackToTop />
       </body>
