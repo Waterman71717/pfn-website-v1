@@ -10,7 +10,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image
-                src="/images/pfn-youtube-logo.png"
+                src="/images/pfn-logo.webp"
                 alt="Process-First Network Logo"
                 width={300}
                 height={90}
