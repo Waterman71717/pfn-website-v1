@@ -2,7 +2,7 @@ export async function POST(request: Request) {
   try {
     const { name, email, company, stage, challenge, preferredTime, message } = await request.json()
 
-    // Validate required fields
+    // Validate input
     if (!name || !email || !company || !stage || !challenge) {
       return Response.json({ error: "All required fields must be filled" }, { status: 400 })
     }
@@ -14,21 +14,12 @@ export async function POST(request: Request) {
     }
 
     const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID
-    const AIRTABLE_TABLE_NAME = "Consultations"
+    const AIRTABLE_TABLE_NAME = "consultations"
     const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
 
     if (!AIRTABLE_BASE_ID || !AIRTABLE_API_KEY) {
       console.error("Missing Airtable configuration")
       return Response.json({ error: "Server configuration error" }, { status: 500 })
-    }
-
-    // Calculate lead score based on startup stage
-    const stageScores = {
-      idea: 20,
-      mvp: 30,
-      early: 40,
-      growth: 50,
-      scale: 60,
     }
 
     const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`, {
@@ -42,15 +33,12 @@ export async function POST(request: Request) {
           Name: name.trim(),
           Email: email.toLowerCase().trim(),
           Company: company.trim(),
-          "Startup Stage": stage,
-          "Main Challenge": challenge.trim(),
-          "Preferred Time": preferredTime || "Not specified",
-          Message: message?.trim() || "",
-          "Request Date": new Date().toISOString(),
           Status: "Pending",
           Source: "Website - Consultation Request",
-          Priority: stage === "growth" || stage === "scale" ? "High" : "Medium",
-          "Lead Score": stageScores[stage as keyof typeof stageScores] || 30,
+          "Startup Stage": stage,
+          "Main Challenge": challenge.trim(),
+          "Preferred Time": preferredTime,
+          Message: message?.trim() || "",
         },
       }),
     })
