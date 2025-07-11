@@ -31,11 +31,8 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         fields: {
           Email: email.toLowerCase().trim(),
-          "Subscription Date": new Date().toISOString(),
           Source: "Website - Newsletter",
           Status: "Active",
-          "Lead Score": 15,
-          "Subscription Type": "Weekly Tips",
         },
       }),
     })
