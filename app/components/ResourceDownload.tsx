@@ -48,7 +48,7 @@ export default function ResourceDownload({
         setSubmitted(true)
         setEmail("")
         // Trigger direct file download
-        window.open(`/download/${fileName}`, "_blank")
+        window.open(`/downloads/${fileName}`, "_blank")
       } else {
         alert("Error: Failed to process download")
       }
