@@ -1,98 +1,52 @@
-"use client"
+export async function POST(request: Request) {
+  try {
+    const { name, email, message } = await request.json()
 
-import type React from "react"
-
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { useState } from "react"
-
-export default function FeedbackForm() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      const response = await fetch("/api/feedback", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setSubmitted(true)
-        setFormData({ name: "", email: "", message: "" })
-      }
-    } catch (error) {
-      console.error("Error submitting feedback:", error)
-    } finally {
-      setIsSubmitting(false)
+    // Validate input
+    if (!name || !email || !message) {
+      return Response.json({ error: "All fields are required" }, { status: 400 })
     }
-  }
 
-  return (
-    <section className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Got Ideas or Feedback?</h2>
-            <p className="text-xl text-gray-300">
-              Help us improve PFN by sharing your thoughts, suggestions, or questions.
-            </p>
-          </div>
-          <div className="bg-navy p-8 rounded-lg">
-            {submitted ? (
-              <div className="text-center">
-                <div className="text-gold text-6xl mb-4">✓</div>
-                <h3 className="text-2xl font-semibold mb-2">Thank You!</h3>
-                <p className="text-gray-300">Your feedback has been received. We'll get back to you soon.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input
-                    type="text"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                  />
-                  <Input
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                  />
-                </div>
-                <Textarea
-                  placeholder="Your message, ideas, or feedback..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  rows={5}
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                />
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gold hover:bg-gold/90 text-navy font-semibold py-3 text-lg"
-                >
-                  {isSubmitting ? "Sending..." : "Send Feedback"}
-                </Button>
-              </form>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return Response.json({ error: "Invalid email format" }, { status: 400 })
+    }
+
+    const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID
+    const AIRTABLE_TABLE_NAME = "feedback form"
+    const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY
+
+    if (!AIRTABLE_BASE_ID || !AIRTABLE_API_KEY) {
+      console.error("Missing Airtable configuration")
+      return Response.json({ error: "Server configuration error" }, { status: 500 })
+    }
+
+    const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fields: {
+          Name: name.trim(),
+          Email: email.toLowerCase().trim(),
+          Message: message.trim(),
+          Source: "Website - Feedback Form",
+        },
+      }),
+    })
+
+    if (response.ok) {
+      return Response.json({ success: true, message: "Feedback submitted successfully!" })
+    } else {
+      const errorData = await response.json()
+      console.error("Airtable error:", errorData)
+      return Response.json({ error: "Failed to submit feedback" }, { status: 500 })
+    }
+  } catch (error) {
+    console.error("Error submitting feedback:", error)
+    return Response.json({ error: "Internal server error" }, { status: 500 })
+  }
 }
